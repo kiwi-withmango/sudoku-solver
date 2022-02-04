@@ -9,7 +9,7 @@ def which_square():
         # board = test_board
 
         return board
-        n = True
+        
     while not n:
         print('for easier designation, here is a numbered board')
         display_board(board_1)
