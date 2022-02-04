@@ -2,7 +2,7 @@ print('Welcome to sudoku solver!')
 
 def which_square():
     n = False
-    inputt = input('would you like to use the test board?\n')
+    inputt = input('would you like to use the test board? ( yes or no) \n')
     if inputt == 'yes':
         for i in range(0,82):
             board[i] = test_board[i]
