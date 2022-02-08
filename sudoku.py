@@ -1,14 +1,14 @@
 print('Welcome to sudoku solver!')
 
 def which_square():
-    n = False
-    inputt = input('would you like to use the test board? ( yes or no) \n')
-    if inputt == 'yes':
+    inputt = input('would you like to use the test board? (yes or no)\n')
+    if inputt == 'no' or inputt == 'n':
+        n = False
+    else:
         for i in range(0,82):
             board[i] = test_board[i]
-        # board = test_board
-
         return board
+
         
     while not n:
         print('for easier designation, here is a numbered board')
@@ -47,6 +47,69 @@ def filled_board():
         else:
             z = True
             print('great!')
+def check(grid):
+    x = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == 1:
+                val = grid[i][j]
+                if logic(grid, val, (i, j)):
+                    x += 0
+                else:
+                    x += 1
+            elif grid[i][j] == 2:
+                val = grid[i][j]
+                if logic(grid, val, (i, j)):
+                    x += 0
+                else:
+                    x += 1
+            elif grid[i][j] == 3:
+                val = grid[i][j]
+                if logic(grid, val, (i, j)):
+                    x += 0
+                else:
+                    x += 1
+            elif grid[i][j] == 4:
+                val = grid[i][j]
+                if logic(grid, val, (i, j)):
+                    x += 0
+                else:
+                    x += 1
+            elif grid[i][j] == 5:
+                val = grid[i][j]
+                if logic(grid, val, (i, j)):
+                    x += 0
+                else:
+                    x += 1
+            elif grid[i][j] == 6:
+                val = grid[i][j]
+                if logic(grid, val, (i, j)):
+                    x += 0
+                else:
+                    x += 1
+            elif grid[i][j] == 7:
+                val = grid[i][j]
+                if logic(grid, val, (i, j)):
+                    x += 0
+                else:
+                    x += 1
+            elif grid[i][j] == 8:
+                val = grid[i][j]
+                if logic(grid, val, (i, j)):
+                    x += 0
+                else:
+                    x += 1
+            elif grid[i][j] == 9:
+                val = grid[i][j]
+                if logic(grid, val, (i, j)):
+                    x += 0
+                else:
+                    x += 1
+    if x > 0:
+        print(grid)
+        print('sorry it looks like you didnt fill that out correctly, youll have to start over')
+    else:
+        print('Great! it looks like you filled it out correctly')
 
 def logic(grid, val , num):
 
@@ -84,6 +147,7 @@ def empty(grid):
 def change(board):
     filled_board()
     grid = change_board(board)
+    check(grid)
     return grid
 def solve(grid):
     pos = empty(grid)
