@@ -51,60 +51,12 @@ def check(grid):
     x = 0
     for i in range(len(grid)):
         for j in range(len(grid[0])):
-            if grid[i][j] == 1:
-                val = grid[i][j]
+            val = grid[i][j]
+            if val != 0:
                 if logic(grid, val, (i, j)):
                     x += 0
                 else:
-                    x += 1
-            elif grid[i][j] == 2:
-                val = grid[i][j]
-                if logic(grid, val, (i, j)):
-                    x += 0
-                else:
-                    x += 1
-            elif grid[i][j] == 3:
-                val = grid[i][j]
-                if logic(grid, val, (i, j)):
-                    x += 0
-                else:
-                    x += 1
-            elif grid[i][j] == 4:
-                val = grid[i][j]
-                if logic(grid, val, (i, j)):
-                    x += 0
-                else:
-                    x += 1
-            elif grid[i][j] == 5:
-                val = grid[i][j]
-                if logic(grid, val, (i, j)):
-                    x += 0
-                else:
-                    x += 1
-            elif grid[i][j] == 6:
-                val = grid[i][j]
-                if logic(grid, val, (i, j)):
-                    x += 0
-                else:
-                    x += 1
-            elif grid[i][j] == 7:
-                val = grid[i][j]
-                if logic(grid, val, (i, j)):
-                    x += 0
-                else:
-                    x += 1
-            elif grid[i][j] == 8:
-                val = grid[i][j]
-                if logic(grid, val, (i, j)):
-                    x += 0
-                else:
-                    x += 1
-            elif grid[i][j] == 9:
-                val = grid[i][j]
-                if logic(grid, val, (i, j)):
-                    x += 0
-                else:
-                    x += 1
+                    x += 1        
     if x > 0:
         print(grid)
         print('sorry it looks like you didnt fill that out correctly, youll have to start over')
